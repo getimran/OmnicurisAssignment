@@ -93,82 +93,82 @@ endpoint: /omnicuris/v1/ecommerce/product/all     <br/>
 method: GET    <br/>
 request body: NONE    <br/>
 response body:   <br/>
-[
-    {
-        "id": 1,
-        "productName": "Green MedPack",
-        "productDesc": "This is Green Medi pack.",
-        "price": 105,
-        "stockQuantity": 23
-    },
-    {
-        "id": 2,
-        "productName": "Ayurveda Cream 200ml",
-        "productDesc": "This is Ayurveda Cream 200ml",
-        "price": 235.89,
-        "stockQuantity": 13
-    }
-]
+[    <br/>
+    {     <br/>
+        "id": 1,   <br/>
+        "productName": "Green MedPack",   <br/>
+        "productDesc": "This is Green Medi pack.",    <br/>
+        "price": 105,    <br/>
+        "stockQuantity": 23    <br/>
+    },   <br/>
+    {   <br/>
+        "id": 2,    <br/>
+        "productName": "Ayurveda Cream 200ml",    <br/>
+        "productDesc": "This is Ayurveda Cream 200ml",    <br/>
+        "price": 235.89,    <br/>
+        "stockQuantity": 13    <br/>
+    }   <br/>
+]   <br/>
 
 --------------------------------------------------------------------------------------------------------------
 
 # 3.    Single & bulk ordering (Just consider the item, no. of items & email ids as params for ordering)
 
-endpoint: /omnicuris/v1/ecommerce/order/place/{userEmail}
-method: POST
-request body: 
-SINGLE PRODUCT ORDER REQUEST:
-[
-{
-	"product":{
-		"id" : 2
-	},
-	"quantity": 4
-}
-]
+endpoint: /omnicuris/v1/ecommerce/order/place/{userEmail}    <br/>
+method: POST    <br/>
+request body:     <br/>
+SINGLE PRODUCT ORDER REQUEST:   <br/>
+[   <br/>
+{   <br/>
+	"product":{    <br/>
+		"id" : 2   <br/>
+	},   <br/>
+	"quantity": 4   <br/>
+}   <br/>
+]   <br/>
 
-BULK PRODUCTS ORDER REQUEST:
-[
-{
-	"product":{
-		"id" : 2
-	},
-	"quantity": 4
-},
-{
-	"product":{
-		"id" : 1
-	},
-	"quantity": 2
-}	
-]
+BULK PRODUCTS ORDER REQUEST:   <br/>
+[   <br/>
+{     <br/>
+	"product":{   <br/>
+		"id" : 2   <br/>
+	},   <br/>
+	"quantity": 4   <br/>
+},   <br/>
+{   <br/>
+	"product":{    <br/>
+		"id" : 1    <br/>
+	},     <br/>
+	"quantity": 2     <br/>
+}	<br/>
+]   <br/>
 
-response body:
-SUCCESS RESPONSE:
-{
-    "id": 1,
-    "orderTotal": 1153.56,
-    "totalItems": 6,
-    "orderStatus": "SUCCESS",
-    "message": "Order Placed Successfully !!"
-}
-
-RESPONSE IN CASE OF OUT OF STOCK:
-{
-    "id": 0,
-    "orderTotal": 0,
-    "totalItems": 0,
-    "orderStatus": "FAILED",
-    "message": "Order Failed. Product with id 2 is Out of Stock."
+response body:   <br/>
+SUCCESS RESPONSE:   <br/>
+{   <br/>
+    "id": 1,   <br/>
+    "orderTotal": 1153.56,    <br/>
+    "totalItems": 6,    <br/>
+    "orderStatus": "SUCCESS",   <br/>
+    "message": "Order Placed Successfully !!"    <br/>
 }
 
-RESPONSE IN CASE OF LOW STOCK:
+RESPONSE IN CASE OF OUT OF STOCK:    <br/>
 {
-    "id": 0,
-    "orderTotal": 0,
-    "totalItems": 0,
-    "orderStatus": "FAILED",
-    "message": "Order Failed. Product with id 2 is in low stock. InStock: 10 OrderedQuantity: 15"
+    "id": 0,    <br/>
+    "orderTotal": 0,    <br/>
+    "totalItems": 0,    <br/>
+    "orderStatus": "FAILED",   <br/>
+    "message": "Order Failed. Product with id 2 is Out of Stock."   <br/>
+}   <br/>
+
+RESPONSE IN CASE OF LOW STOCK:   <br/>
+{   <br/>
+    "id": 0,   <br/>
+    "orderTotal": 0,   <br/>
+    "totalItems": 0,    <br/>
+    "orderStatus": "FAILED",   <br/>
+    "message": "Order Failed. Product with id 2 is in low stock. InStock: 10 OrderedQuantity: 15"   <br/>
 }
 
 -------------------------------------------------------------------------------------------------------------
