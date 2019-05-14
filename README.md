@@ -25,74 +25,74 @@ base-url: http://localhost:8080
 
 ### CREATE: 
 endpoint: /omnicuris/v1/ecommerce/product/add <br/>
-method: POST
-request body:
-{
-    "productName": "ORS TetraPack",
-    "productDesc": "This is ORS TetraPack 500ml.",
-    "price": 25,
-    "stockQuantity": 345
-}
-response body:
-{
-    "id": 3,
-    "productName": "ORS TetraPack",
-    "productDesc": "This is ORS TetraPack 500ml.",
-    "price": 25,
-    "stockQuantity": 345
-} 
+method: POST    <br/>
+request body:   <br/>
+{               <br/>
+    "productName": "ORS TetraPack",  <br/>
+    "productDesc": "This is ORS TetraPack 500ml.",  <br/>
+    "price": 25,   <br/>
+    "stockQuantity": 345   <br/>
+}   <br/>
+response body:   <br/>
+{   <br/>
+    "id": 3,   <br/>
+    "productName": "ORS TetraPack",    <br/>
+    "productDesc": "This is ORS TetraPack 500ml.",   <br/>
+    "price": 25,     <br/>
+    "stockQuantity": 345   <br/>
+} <br/>
 
 
 ### RETRIEVE:
-endpoint: /omnicuris/v1/ecommerce/product/{id}
-method: GET
-request body: NONE
-response body:
-{
-    "id": 1,
-    "productName": "Green MedPack",
-    "productDesc": "This is Green Medi pack.",
-    "price": 105,
-    "stockQuantity": 23
+endpoint: /omnicuris/v1/ecommerce/product/{id}     <br/>
+method: GET    <br/>
+request body: NONE    <br/>
+response body:   <br/>
+{    <br/>
+    "id": 1,   <br/>
+    "productName": "Green MedPack",   <br/>
+    "productDesc": "This is Green Medi pack.",    <br/>
+    "price": 105,    <br/>
+    "stockQuantity": 23    <br/>
 }
 
 ### UPDATE:
-endpoint: /omnicuris/v1/ecommerce/product/update/{id}
-method: PUT
-request body:
-{
-       "productName": "ORS TetraPack 500ml",
-        "productDesc": "This is ORS Tetra Pack 500ml.",
-        "price": 78,
-        "stockQuantity": 345
-}
-response body:
-{
-    "id": 2,
-    "productName": "ORS TetraPack 500ml",
-    "productDesc": "This is ORS Tetra Pack 500ml.",
-    "price": 78,
-    "stockQuantity": 345
+endpoint: /omnicuris/v1/ecommerce/product/update/{id}    <br/>
+method: PUT    <br/>
+request body:    <br/>
+{    <br/>
+       "productName": "ORS TetraPack 500ml",    <br/>
+        "productDesc": "This is ORS Tetra Pack 500ml.",    <br/>
+        "price": 78,    <br/>
+        "stockQuantity": 345    <br/>
+}    <br/>
+response body:   <br/>
+{    <br/>
+    "id": 2,   <br/>
+    "productName": "ORS TetraPack 500ml",    <br/>
+    "productDesc": "This is ORS Tetra Pack 500ml.",    <br/>
+    "price": 78,   <br/>
+    "stockQuantity": 345    <br/>
 }
 
 
 ### DELETE:
-endpoint: /omnicuris/v1/ecommerce/product/delete/{id}
-method: PUT
-request body: NONE
-response body: Product with id {id} deleted successfully.
+endpoint: /omnicuris/v1/ecommerce/product/delete/{id}   <br/>
+method: PUT    <br/>
+request body: NONE     <br/>
+response body: Product with id {id} deleted successfully.   <br/>
 
 
-IF PRODUCT WITH THE GIVEN ID ISN'T FOUND, THEN:
-response body: Product with id {id} not found.
+IF PRODUCT WITH THE GIVEN ID ISN'T FOUND, THEN:  <br/>
+response body: Product with id {id} not found.  <br/>
 
 -------------------------------------------------------------------------------------------------------------
 # 2.    All items listing (Products)
 
-endpoint: /omnicuris/v1/ecommerce/product/all
-method: GET
-request body: NONE
-response body:
+endpoint: /omnicuris/v1/ecommerce/product/all     <br/>
+method: GET    <br/>
+request body: NONE    <br/>
+response body:   <br/>
 [
     {
         "id": 1,
