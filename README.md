@@ -174,30 +174,30 @@ RESPONSE IN CASE OF LOW STOCK:
 -------------------------------------------------------------------------------------------------------------
 # 4.    All orders
 
-endpoint: /omnicuris/v1/ecommerce/order/all
-method: GET
-request body: NONE
-response body:
-[
-    {
-        "id": 1,
-        "orderTotal": 912,
-        "totalItems": 11,
-        "orderStatus": "SUCCESS",
-        "message": "Order Placed Successfully !!"
-    },
-    {
-        "id": 2,
-        "orderTotal": 912,
-        "totalItems": 11,
-        "orderStatus": "SUCCESS",
-        "message": "Order Placed Successfully !!"
-    },
-    {
-        "id": 3,
-        "orderTotal": 1332,
-        "totalItems": 15,
-        "orderStatus": "SUCCESS",
-        "message": "Order Placed Successfully !!"
-    }
-]
+endpoint: /omnicuris/v1/ecommerce/order/all   <br/>
+method: GET   <br/>
+request body: NONE   <br/>
+response body:   <br/>
+[   <br/>
+    {   <br/>
+        "id": 1,     <br/>
+        "orderTotal": 912,     <br/>
+        "totalItems": 11,    <br/>
+        "orderStatus": "SUCCESS",     <br/>
+        "message": "Order Placed Successfully !!"    <br/>
+    },   <br/>
+    {   <br/>
+        "id": 2,    <br/>
+        "orderTotal": 912,    <br/>
+        "totalItems": 11,     <br/>
+        "orderStatus": "SUCCESS",     <br/>
+        "message": "Order Placed Successfully !!"   <br/>
+    },   <br/>
+    {   <br/>
+        "id": 3,     <br/>
+        "orderTotal": 1332,   <br/>
+        "totalItems": 15,   <br/>
+        "orderStatus": "SUCCESS",     <br/>
+        "message": "Order Placed Successfully !!"    <br/>
+    }   <br/>
+]  <br/>
