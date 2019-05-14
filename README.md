@@ -24,7 +24,7 @@ base-url: http://localhost:8080
 # 1.    CRUD operations on items(Product)
 
 ### CREATE: 
-endpoint: /omnicuris/v1/ecommerce/product/add
+endpoint: /omnicuris/v1/ecommerce/product/add <br/>
 method: POST
 request body:
 {
