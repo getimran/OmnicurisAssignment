@@ -76,14 +76,19 @@ public class OrderService {
 		order.setOrderTotal(totalAmount);
 		order.setTotalItems(totalItems);
 		order.setUserEmail(userEmail);
+		order.setOrderStatus(OrderStatus.success.getStatus());
+		order.setMessage("Order Placed Successfully !!");
 		
 		Order placed =orderRepository.save(order);
 		orderDto =  orderConverter.convertToDto(placed);
-//		orderDto.setId(placed.getId());
-//		orderDto.setTotalItems(totalItems);
-//		order.setOrderTotal(totalAmount);
-		orderDto.setOrderStatus(OrderStatus.success.getStatus());
-		orderDto.setMessage("Order Placed Successfully !!");
+/*		orderDto.setOrderStatus(OrderStatus.success.getStatus());
+		orderDto.setMessage("Order Placed Successfully !!");*/
 		return orderDto;
 	}
+	
+	
+	public Iterable<Order> findAllOrders(){		
+		return orderRepository.findAll();		
+	}
+	
 }

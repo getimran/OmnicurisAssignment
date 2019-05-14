@@ -35,6 +35,9 @@ public class Order implements Serializable{
 	
 	private BigDecimal orderTotal;
 	
+	private String orderStatus;
+	
+	private String message;
 	
 	public Order() {
 		super();
@@ -79,6 +82,22 @@ public class Order implements Serializable{
 
 	public void setTotalItems(int totalItems) {
 		this.totalItems = totalItems;
+	}
+
+	public String getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(String orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 	
 	

@@ -51,6 +51,14 @@ public class ProductController {
 		return new ResponseEntity<List<ProductDto>>(IterableUtils.toList(products).stream().map(product -> productConverter.convertToDto(product)).collect(Collectors.toList()), HttpStatus.OK);
 	}
 
+	@GetMapping("{id}")
+	public ResponseEntity<Object> findProduct(@PathVariable(required=true) Long id){
+		if(!productService.existById(id)) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product with id "+id+" not found.");
+		}
+		return ResponseEntity.status(HttpStatus.OK).body(productConverter.convertToDto(productService.findById(id)));
+	}
+	
 	@PostMapping("/add")
 	public ResponseEntity<ProductDto> addProduct(@RequestBody(required=true) Product product){
 		return new ResponseEntity<ProductDto>(productConverter.convertToDto(productService.addProduct(product)), HttpStatus.CREATED);
